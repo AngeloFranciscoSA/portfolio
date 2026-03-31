@@ -8,7 +8,7 @@ export function useVisible(threshold = 0.12) {
   onMounted(() => {
     observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry?.isIntersecting) {
           visible.value = true
           observer?.disconnect()
         }
