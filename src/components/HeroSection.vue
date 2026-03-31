@@ -47,10 +47,10 @@ onUnmounted(() => tl?.kill())
 
     <div ref="ruleTopRef" class="w-full h-px bg-neutral-300 dark:bg-neutral-800" />
 
-    <div class="flex-1 flex items-center overflow-hidden py-8">
+    <div class="flex-1 flex items-center py-8">
       <h1
         ref="nameRef"
-        class="font-display font-extrabold leading-[0.9] tracking-tight text-[clamp(3rem,8vw,6rem)] uppercase"
+        class="font-display font-extrabold leading-[0.9] tracking-tight text-[clamp(2rem,8vw,6rem)] uppercase w-full"
       >
         Ângelo<br />Francisco
       </h1>

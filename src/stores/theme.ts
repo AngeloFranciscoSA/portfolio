@@ -20,11 +20,7 @@ export const useThemeStore = defineStore('theme', () => {
 
   function init() {
     const stored = localStorage.getItem('theme')
-    if (stored) {
-      isDark.value = stored === 'dark'
-    } else {
-      isDark.value = window.matchMedia('(prefers-color-scheme: dark)').matches
-    }
+    isDark.value = stored === 'dark'
     apply()
   }
 

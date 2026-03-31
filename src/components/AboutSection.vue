@@ -92,13 +92,13 @@ onUnmounted(() => triggers.forEach((t) => t.kill()))
       <div
         v-for="(stat, i) in t.about.stats"
         :key="stat.label"
-        class="stat-item py-10 px-8 md:px-12 flex flex-col gap-2"
+        class="stat-item py-8 px-5 md:px-12 md:py-10 flex flex-col gap-2 overflow-hidden"
         :class="[
           i < t.about.stats.length - 1 ? 'border-r border-neutral-300 dark:border-neutral-800' : '',
           i >= 2 ? 'border-t md:border-t-0 border-neutral-300 dark:border-neutral-800' : '',
         ]"
       >
-        <span class="font-display font-extrabold text-5xl leading-none">{{ stat.value }}</span>
+        <span class="font-display font-extrabold text-3xl md:text-5xl leading-none break-words">{{ stat.value }}</span>
         <span
           class="text-xs font-semibold tracking-widest uppercase text-neutral-500 dark:text-neutral-500"
           >{{ stat.label }}</span
